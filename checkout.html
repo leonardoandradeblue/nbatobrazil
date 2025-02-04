@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NBA To Brazil - Checkout</title>
+  <style>
+    /* Estilos Gerais */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    header {
+      background: #1D428A; /* Azul NBA */
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+    nav {
+      background: #C9082A; /* Vermelho NBA */
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #FFD700;
+    }
+    /* Conteúdo principal */
+    .content {
+      padding: 40px 20px;
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    /* Tabela do checkout */
+    .checkout-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #1D428A;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .checkout-table th, .checkout-table td {
+      padding: 15px;
+      text-align: center;
+    }
+    .checkout-table th {
+      background-color: #000; /* Cabeçalho da tabela preto */
+      color: #FFD700;         /* Texto dourado */
+      text-transform: uppercase;
+    }
+    .checkout-table td {
+      vertical-align: middle;
+    }
+    .item-name {
+      font-weight: bold;
+      color: #FFD700;
+    }
+    /* Total */
+    .checkout-total {
+      margin-top: 20px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #FFD700; /* Dourado */
+    }
+    /* Formulário de Dados do Usuário */
+    .checkout-form {
+      width: 100%;
+      max-width: 600px;
+      background: #1D428A;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-top: 30px;
+      padding: 20px;
+      text-align: left; /* Para melhor legibilidade */
+    }
+    .checkout-form h3 {
+      margin-top: 0;
+      text-align: center;
+      color: #FFD700; /* Dourado */
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .checkout-form label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    .checkout-form input,
+    .checkout-form select,
+    .checkout-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+    .checkout-form .row {
+      display: flex;
+      gap: 10px;
+    }
+    .checkout-form .row > div {
+      flex: 1;
+    }
+    .checkout-form button {
+      background: #C9082A;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+      width: 100%;
+      font-size: 1rem;
+    }
+    .checkout-form button:hover {
+      background: #FFD700;
+      color: #000;
+    }
+    /* Botão Voltar ou Editar Carrinho */
+    .actions {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+    .actions a {
+      text-decoration: none;
+      background: #444;
+      color: #fff;
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .actions a:hover {
+      background: #FFD700;
+      color: #000;
+    }
+    /* Rodapé */
+    footer {
+      background: #1D428A;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 0.9rem;
+    }
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <h1>NBA To Brazil - Checkout</h1>
+  </header>
+  <!-- Menu (ajuste conforme suas páginas existentes) -->
+  <nav>
+    <a href="https://nbatobrazil.tumblr.com/" target="_blank">Página Inicial</a>
+    <a href="https://nbatobrazil.tumblr.com/noticias" target="_blank">Notícias</a>
+    <a href="https://nbatobrazil.tumblr.com/historia" target="_blank">História</a>
+    <a href="https://nbatobrazil.tumblr.com/ingressos" target="_blank">Ingressos</a>
+    <a href="https://nbatobrazil.tumblr.com/resultadospassados" target="_blank">Resultados</a>
+    <a href="https://nbatobrazil.tumblr.com/contato" target="_blank">Contato</a>
+  </nav>
+  <!-- Conteúdo -->
+  <div class="content">
+    <h2>Revise seus ingressos</h2>
+    <table class="checkout-table">
+      <thead>
+        <tr>
+          <th>Jogo</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Linha 1 (fictícia) -->
+        <tr>
+          <td class="item-name">Time A vs Time B</td>
+          <td>R$ 250,00</td>
+          <td>2</td>
+          <td>R$ 500,00</td>
+        </tr>
+        <!-- Linha 2 (fictícia) -->
+        <tr>
+          <td class="item-name">Time C vs Time D</td>
+          <td>R$ 320,00</td>
+          <td>1</td>
+          <td>R$ 320,00</td>
+        </tr>
+        <!-- Linha 3 (fictícia) -->
+        <tr>
+          <td class="item-name">Time E vs Time F</td>
+          <td>R$ 400,00</td>
+          <td>3</td>
+          <td>R$ 1.200,00</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="checkout-total">Total: R$ 2.020,00</div>
+    <!-- Botão para voltar ao carrinho, caso queira -->
+    <div class="actions">
+      <a href="cart.html">Editar Carrinho</a>
+    </div>
+    <!-- Formulário de Dados de Checkout -->
+    <form class="checkout-form">
+      <h3>Dados para Finalização</h3>
+      <!-- Nome e E-mail -->
+      <div class="row">
+        <div>
+          <label for="nome">Nome Completo:</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome completo">
+        </div>
+        <div>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com">
+        </div>
+      </div>
+      <!-- Endereço -->
+      <label for="endereco">Endereço Completo:</label>
+      <input type="text" id="endereco" name="endereco" placeholder="Rua, número, complemento...">
+      <!-- Cidade e Estado -->
+      <div class="row">
+        <div>
+          <label for="cidade">Cidade:</label>
+          <input type="text" id="cidade" name="cidade">
+        </div>
+        <div>
+          <label for="estado">Estado:</label>
+          <select id="estado" name="estado">
+            <option value="">Selecione...</option>
+            <option value="SP">SP</option>
+            <option value="RJ">RJ</option>
+            <option value="MG">MG</option>
+            <option value="RS">RS</option>
+            <option value="BA">BA</option>
+            <!-- etc. -->
+          </select>
+        </div>
+      </div>
+      <!-- Dados de Pagamento (Exemplo simples) -->
+      <label for="cartao">Número do Cartão:</label>
+      <input type="text" id="cartao" name="cartao" placeholder="XXXX XXXX XXXX XXXX">
+      <label for="validade">Validade (MM/AA):</label>
+      <input type="text" id="validade" name="validade" placeholder="MM/AA">
+      <div class="row">
+        <div>
+          <label for="cvv">CVV:</label>
+          <input type="text" id="cvv" name="cvv" placeholder="3 dígitos">
+        </div>
+        <div>
+          <label for="parcelas">Parcelas:</label>
+          <select id="parcelas" name="parcelas">
+            <option value="1x">1x sem juros</option>
+            <option value="2x">2x sem juros</option>
+            <option value="3x">3x sem juros</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit">Finalizar Compra</button>
+    </form>
+  </div>
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 NBA Tickets. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

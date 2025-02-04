@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NFKKF2YE3P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NFKKF2YE3P');
+</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NBA Tickets</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #000; /* Fundo preto */
+      color: #fff; /* Texto branco */
+    }
+    /* Cabeçalho */
+    header {
+      background: #1D428A; /* Azul da NBA */
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+    header img {
+      max-width: 100px;
+    }
+    /* Menu de navegação */
+    nav {
+      background: #C9082A; /* Vermelho NBA */
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #FFD700; /* Dourado ao passar o mouse */
+    }
+    /* Conteúdo geral */
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    /* Seções específicas */
+    .news-section, .tickets-section, .history-section, .results-section, .contact-section {
+      width: 100%;
+      max-width: 1000px;
+      margin-bottom: 50px;
+    }
+    /* Cartões de notícia, jogo e resultado */
+    .news-card, .game-card, .result-card {
+      background: #1D428A;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: inline-block;
+      margin: 15px;
+      max-width: 300px;
+      padding: 15px;
+      color: #fff;
+      text-align: left;
+      vertical-align: top;
+    }
+    .news-card img, .game-card img, .result-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .news-card h3, .game-card h3, .result-card h3 {
+      margin: 10px 0;
+    }
+    .news-card p, .result-card p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    /* Seções de História e Resultados (blocos maiores) */
+    .history-section, .results-section {
+      background: #1D428A;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+    }
+    .history-section p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    /* Botões */
+    button {
+      background: #C9082A;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #FFD700; /* Dourado ao passar o mouse */
+      color: #000; /* Texto preto no hover */
+    }
+    /* Sessão de contato */
+    .contact-section {
+      background: #1D428A;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      padding: 20px;
+      text-align: left; /* Form mais legível */
+    }
+    .contact-section h2 {
+      margin-top: 0;
+      text-align: center;
+    }
+    .contact-section form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .contact-section label {
+      width: 100%;
+      max-width: 400px;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    .contact-section input,
+    .contact-section textarea {
+      width: 100%;
+      max-width: 400px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+    .contact-section textarea {
+      height: 120px;
+      resize: vertical;
+    }
+    /* Rodapé */
+    footer {
+      background: #1D428A;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    /* Responsividade básica */
+    @media (max-width: 768px) {
+      .news-card, .game-card, .result-card {
+        max-width: 100%;
+        margin: 10px 0;
+      }
+      nav a {
+        display: inline-block;
+        margin: 10px 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/03/NBA_logo.svg" alt="Logo da NBA"/>
+    <h1>NBA Tickets</h1>
+  </header>
+  <!-- Menu de navegação -->
+  <nav>
+  <a href="https://nbatobrazil.tumblr.com/" target="_blank">Página Inicial</a>
+    <a href="https://nbatobrazil.tumblr.com/noticias" target="_blank">Notícias</a>
+    <a href="https://nbatobrazil.tumblr.com/historia" target="_blank">História</a>
+    <a href="https://nbatobrazil.tumblr.com/ingressos" target="_blank">Ingressos</a>
+    <a href="https://nbatobrazil.tumblr.com/resultadospassados" target="_blank">Resultados</a>
+    <a href="https://nbatobrazil.tumblr.com/contato" target="_blank">Contato</a>
+  </nav>
+  <!-- Seção de Notícias -->
+  <div class="content" id="news">
+    <h2>Últimas Notícias</h2>
+    <div class="news-section">
+      <!-- Card de Notícia 1 -->
+      <div class="news-card">
+        <img src="https://via.placeholder.com/300x200?text=NBA+Playoffs" alt="Notícia 1"/>
+        <h3>NBA Playoffs: Finais se aproximam!</h3>
+        <p>
+          Confira os destaques das últimas rodadas dos playoffs e veja quais times estão mais próximos
+          de garantir a vaga nas finais da NBA. Grandes surpresas estão agitando a competição,
+          e a disputa pelo título permanece imprevisível.
+        </p>
+      </div>
+      <!-- Card de Notícia 2 -->
+      <div class="news-card">
+        <img src="https://via.placeholder.com/300x200?text=Draft+2025" alt="Notícia 2"/>
+        <h3>Draft da NBA 2025: Quem são os favoritos?</h3>
+        <p>
+          O Draft 2025 está chegando! Conheça os novos talentos que prometem brilhar nas quadras da NBA
+          nas próximas temporadas. Universitários e atletas internacionais disputam as primeiras posições,
+          fazendo os olheiros apostarem em várias promessas que podem mudar o rumo das franquias.
+        </p>
+      </div>
+      <!-- Card de Notícia 3 -->
+      <div class="news-card">
+        <img src="https://via.placeholder.com/300x200?text=LeBron+Record" alt="Notícia 3"/>
+        <h3>LeBron James quebra mais um recorde histórico!</h3>
+        <p>
+          LeBron James segue fazendo história! Descubra como ele superou mais uma marca e se consolidou
+          como uma lenda do basquete. A cada temporada, o astro reforça seu nome entre os maiores jogadores
+          que já pisaram em quadra.
+        </p>
+      </div>
+      <!-- Card de Notícia 4 (Exemplo adicional) -->
+      <div class="news-card">
+        <img src="https://via.placeholder.com/300x200?text=NBA+Global+Games" alt="Notícia 4"/>
+        <h3>NBA Global Games</h3>
+        <p>
+          A NBA continua expandindo suas fronteiras com jogos em diversos países. Fique por dentro da agenda
+          dos próximos confrontos internacionais e saiba como adquirir ingressos para vivenciar o melhor do
+          basquete mundial ao vivo.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Seção de História -->
+  <div class="content" id="history">
+    <h2>História</h2>
+    <div class="history-section">
+      <p>
+        A ideia por trás do nome <strong>NBA to Brazil</strong> nasceu da paixão dos fãs brasileiros pelo basquete e da crescente presença
+        da NBA no Brasil. Nossa missão é trazer a experiência da liga mais famosa do mundo diretamente para o público brasileiro,
+        facilitando o acesso a ingressos para os jogos e promovendo a cultura do basquete no país.
+      </p>
+      <p>
+        Desde a primeira vez que grandes jogadores da NBA pisaram em solo brasileiro para exibições e jogos de pré-temporada,
+        ficou evidente que o povo brasileiro tem um amor e uma energia únicos pelo esporte. Jogadores lendários, como Michael Jordan,
+        Kobe Bryant e LeBron James, inspiraram gerações, mostrando que o basquete vai muito além das quadras — é um verdadeiro estilo de vida.
+      </p>
+      <p>
+        Hoje, com a evolução tecnológica e a facilidade de acesso à informação, o interesse pelo basquete americano cresceu de forma exponencial.
+        Cada vez mais fãs acompanham as partidas pela TV, redes sociais e até por transmissões de streaming. O <strong>NBA to Brazil</strong>
+        surgiu para aproximar ainda mais esse público, oferecendo a chance de vivenciar o espetáculo da NBA de perto, seja em jogos decisivos ou
+        em experiências exclusivas que só a maior liga de basquete do mundo pode proporcionar.
+      </p>
+    </div>
+  </div>
+  <!-- Seção de Ingressos (Próximos Jogos) -->
+  <div class="content" id="games">
+    <h2>Próximos Jogos</h2>
+    <p>Garanta seu lugar nos duelos mais esperados da temporada e viva a emoção da NBA ao máximo!</p>
+    <div class="tickets-section">
+      <!-- Card de Jogo 1 -->
+      <div class="game-card">
+        <img src="https://via.placeholder.com/300x200?text=Team+1+vs+Team+2" alt="Jogo 1"/>
+        <h3>Time A vs Time B</h3>
+        <p>Data: 10 de Fevereiro de 2025</p>
+        <p>Local: Arena X</p>
+        <a href="https://nbatobrazil.tumblr.com/ingressos" target="_blank" class="btn-buy" style="text-decoration: none; background: #c9082a; color: #fff; padding: 10px 20px; border-radius: 5px; font-weight: bold; display: inline-block; text-align: center;">Comprar</a>
+      </div>
+      <!-- Card de Jogo 2 -->
+      <div class="game-card">
+        <img src="https://via.placeholder.com/300x200?text=Team+3+vs+Team+4" alt="Jogo 2"/>
+        <h3>Time C vs Time D</h3>
+        <p>Data: 15 de Fevereiro de 2025</p>
+        <p>Local: Arena Y</p>
+        <a href="https://nbatobrazil.tumblr.com/ingressos" target="_blank" class="btn-buy" style="text-decoration: none; background: #c9082a; color: #fff; padding: 10px 20px; border-radius: 5px; font-weight: bold; display: inline-block; text-align: center;">Comprar</a>
+      </div>
+      <!-- Card de Jogo 3 -->
+      <div class="game-card">
+        <img src="https://via.placeholder.com/300x200?text=Team+5+vs+Team+6" alt="Jogo 3"/>
+        <h3>Time E vs Time F</h3>
+        <p>Data: 20 de Fevereiro de 2025</p>
+        <p>Local: Arena Z</p>
+        <a href="https://nbatobrazil.tumblr.com/ingressos" target="_blank" class="btn-buy" style="text-decoration: none; background: #c9082a; color: #fff; padding: 10px 20px; border-radius: 5px; font-weight: bold; display: inline-block; text-align: center;">Comprar</a>
+      </div>
+    </div>
+  </div>
+  <!-- Seção de Resultados (Jogos Passados) -->
+  <div class="content" id="results">
+    <h2>Resultados dos Jogos Passados</h2>
+    <div class="results-section">
+      <!-- Card de Resultado 1 -->
+      <div class="result-card">
+        <img src="https://via.placeholder.com/300x200?text=Team+1+100+vs+Team+2+90" alt="Resultado 1"/>
+        <h3>Time A 100 x 90 Time B</h3>
+        <p>Data: 05 de Janeiro de 2025</p>
+        <p>Local: Arena Z</p>
+      </div>
+      <!-- Card de Resultado 2 -->
+      <div class="result-card">
+        <img src="https://via.placeholder.com/300x200?text=Team+3+110+vs+Team+4+98" alt="Resultado 2"/>
+        <h3>Time C 110 x 98 Time D</h3>
+        <p>Data: 02 de Janeiro de 2025</p>
+        <p>Local: Arena Y</p>
+      </div>
+      <!-- Card de Resultado 3 (Exemplo adicional) -->
+      <div class="result-card">
+        <img src="https://via.placeholder.com/300x200?text=Team+7+120+vs+Team+8+100" alt="Resultado 3"/>
+        <h3>Time G 120 x 100 Time H</h3>
+        <p>Data: 28 de Dezembro de 2024</p>
+        <p>Local: Arena X</p>
+      </div>
+    </div>
+  </div>
+  <!-- Seção de Contato -->
+  <div class="content" id="contact">
+    <h2>Contato</h2>
+    <div class="contact-section">
+      <p>
+        Tem alguma dúvida, sugestão ou deseja saber mais sobre os ingressos para jogos da NBA?
+        Preencha o formulário abaixo e nossa equipe retornará o mais breve possível.
+      </p>
+      <form>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" placeholder="Digite sua mensagem..." required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 NBA Tickets. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

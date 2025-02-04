@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NBA To Brazil - Ingressos</title>
+  <style>
+    /* Estilos gerais */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #000; /* Fundo preto */
+      color: #fff;      /* Texto branco */
+    }
+    header {
+      background: #1D428A; /* Azul da NBA */
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+    header img {
+      max-width: 100px;
+    }
+    /* Menu de navegação */
+    nav {
+      background: #C9082A; /* Vermelho NBA */
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #FFD700; /* Dourado ao passar o mouse */
+    }
+    /* Conteúdo principal */
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      min-height: 70vh; /* Para ocupar espaço na tela */
+    }
+    /* Seção de ingressos */
+    .tickets-section {
+      width: 100%;
+      max-width: 1000px;
+      margin-bottom: 50px;
+    }
+    .ticket-card {
+      background: #1D428A;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      display: inline-block;
+      margin: 15px;
+      max-width: 300px;
+      padding: 20px;
+      color: #fff;
+      text-align: left;
+      vertical-align: top;
+    }
+    .ticket-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .ticket-card h3 {
+      margin: 10px 0;
+      font-size: 1.3rem;
+    }
+    .ticket-card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin: 5px 0;
+    }
+    .ticket-price {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin: 10px 0;
+    }
+    /* Botão de compra */
+    .btn-buy {
+      background: #C9082A;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+      width: 100%;
+      max-width: 150px;
+      margin-top: 10px;
+    }
+    .btn-buy:hover {
+      background: #FFD700; /* Dourado ao passar o mouse */
+      color: #000;         /* Texto preto no hover */
+    }
+    /* Rodapé */
+    footer {
+      background: #1D428A;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/03/NBA_logo.svg" alt="Logo da NBA"/>
+    <h1>NBA To Brazil - Ingressos</h1>
+  </header>
+  <!-- Menu de navegação -->
+  <nav>
+    <!-- Ajuste estes links conforme a estrutura do seu projeto -->
+    <a href="https://nbatobrazil.tumblr.com/" target="_blank">Página Inicial</a>
+    <a href="https://nbatobrazil.tumblr.com/noticias" target="_blank">Notícias</a>
+    <a href="https://nbatobrazil.tumblr.com/historia" target="_blank">História</a>
+    <a href="https://nbatobrazil.tumblr.com/ingressos" target="_blank">Ingressos</a>
+    <a href="https://nbatobrazil.tumblr.com/resultadospassados" target="_blank">Resultados</a>
+    <a href="https://nbatobrazil.tumblr.com/contato" target="_blank">Contato</a>
+  </nav>
+  <!-- Conteúdo - Ingressos -->
+  <div class="content">
+    <h2>Garanta seu lugar nos próximos jogos!</h2>
+    <div class="tickets-section">
+     <div class="ticket-card">
+  <img src="https://via.placeholder.com/300x200?text=Team+1+vs+Team+2" alt="Jogo 1">
+  <h3>Time A vs Time B</h3>
+  <p>Data: 10 de Fevereiro de 2025</p>
+  <p>Local: Arena X</p>
+  <p class="ticket-price">R$ 250,00</p>
+  <a href="https://nbatobrazil.tumblr.com/carrinho" target="_blank" class="btn-buy" style="text-decoration: none; background: #c9082a; color: #fff; padding: 10px 20px; border-radius: 5px; font-weight: bold; display: inline-block; text-align: center;">Comprar</a>
+</div>
+      <!-- Cartão de Ingresso 2 -->
+      <div class="ticket-card">
+        <img src="https://via.placeholder.com/300x200?text=Team+3+vs+Team+4" alt="Jogo 2">
+        <h3>Time C vs Time D</h3>
+        <p>Data: 15 de Fevereiro de 2025</p>
+        <p>Local: Arena Y</p>
+        <p class="ticket-price">R$ 320,00</p>
+        <a href="https://nbatobrazil.tumblr.com/carrinho" target="_blank" class="btn-buy" style="text-decoration: none; background: #c9082a; color: #fff; padding: 10px 20px; border-radius: 5px; font-weight: bold; display: inline-block; text-align: center;">Comprar</a>
+      </div>
+      <!-- Cartão de Ingresso 3 -->
+      <div class="ticket-card">
+        <img src="https://via.placeholder.com/300x200?text=Team+5+vs+Team+6" alt="Jogo 3">
+        <h3>Time E vs Time F</h3>
+        <p>Data: 20 de Fevereiro de 2025</p>
+        <p>Local: Arena Z</p>
+        <p class="ticket-price">R$ 400,00</p>
+        <a href="https://nbatobrazil.tumblr.com/carrinho" target="_blank" class="btn-buy" style="text-decoration: none; background: #c9082a; color: #fff; padding: 10px 20px; border-radius: 5px; font-weight: bold; display: inline-block; text-align: center;">Comprar</a>
+      </div>
+      <!-- Cartão de Ingresso 4 (Exemplo adicional) -->
+      <div class="ticket-card">
+        <img src="https://via.placeholder.com/300x200?text=Team+7+vs+Team+8" alt="Jogo 4">
+        <h3>Time G vs Time H</h3>
+        <p>Data: 25 de Fevereiro de 2025</p>
+        <p>Local: Arena W</p>
+        <p class="ticket-price">R$ 180,00</p>
+        <a href="https://nbatobrazil.tumblr.com/carrinho" target="_blank" class="btn-buy" style="text-decoration: none; background: #c9082a; color: #fff; padding: 10px 20px; border-radius: 5px; font-weight: bold; display: inline-block; text-align: center;">Comprar</a>
+      </div>
+    </div>
+  </div>
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 NBA Tickets. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBA Tickets - Carrinho</title>
+  <style>
+    /* Estilos Gerais */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    header {
+      background: #1D428A; /* Azul NBA */
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+    nav {
+      background: #C9082A; /* Vermelho NBA */
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #FFD700;
+    }
+    /* Conteúdo principal */
+    .content {
+      padding: 40px 20px;
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    /* Tabela do carrinho */
+    .cart-table {
+      width: 90%;
+      max-width: 1000px;
+      border-collapse: collapse;
+      margin: 0 auto;
+      background-color: #1D428A;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .cart-table th, .cart-table td {
+      padding: 15px;
+      text-align: center;
+    }
+    .cart-table th {
+      background-color: #000; /* Cabeçalho da tabela preto */
+      color: #FFD700;         /* Texto dourado */
+      text-transform: uppercase;
+    }
+    .cart-table td {
+      vertical-align: middle;
+    }
+    .item-name {
+      font-weight: bold;
+      color: #FFD700;
+    }
+    .item-controls {
+      display: flex;
+      gap: 5px;
+      justify-content: center;
+      align-items: center;
+    }
+    .item-controls button {
+      background: #C9082A;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .item-controls button:hover {
+      background: #FFD700;
+      color: #000;
+    }
+    .remove-btn {
+      background: #444;
+    }
+    .remove-btn:hover {
+      background: #ff5555;
+      color: #000;
+    }
+    /* Total e Botões de Ação */
+    .cart-total {
+      margin-top: 20px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #FFD700; /* Dourado */
+    }
+    .actions {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+    .actions a, .actions button {
+      text-decoration: none;
+      background: #C9082A;
+      color: #fff;
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .actions a:hover,
+    .actions button:hover {
+      background: #FFD700;
+      color: #000;
+    }
+    /* Rodapé */
+    footer {
+      background: #1D428A;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 0.9rem;
+    }
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .cart-table, .cart-table th, .cart-table td {
+        display: block;
+        width: 100%;
+      }
+      .cart-table th, .cart-table td {
+        text-align: left;
+      }
+      .cart-table thead {
+        display: none; /* Para simplificar a visualização em mobile */
+      }
+      .cart-table tr {
+        margin-bottom: 20px;
+        background: #1D428A;
+        border: 1px solid #000;
+        border-radius: 5px;
+      }
+      .cart-table td {
+        padding: 10px;
+        border-bottom: 1px solid #000;
+      }
+      .cart-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: #FFD700;
+      }
+      .item-controls {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <h1>NBA To Brazil - Carrinho</h1>
+  </header>
+  <!-- Menu (ajuste conforme suas páginas existentes) -->
+  <nav>
+    <a href="https://nbatobrazil.tumblr.com/" target="_blank">Página Inicial</a>
+    <a href="https://nbatobrazil.tumblr.com/noticias" target="_blank">Notícias</a>
+    <a href="https://nbatobrazil.tumblr.com/historia" target="_blank">História</a>
+    <a href="https://nbatobrazil.tumblr.com/ingressos" target="_blank">Ingressos</a>
+    <a href="https://nbatobrazil.tumblr.com/resultadospassados" target="_blank">Resultados</a>
+    <a href="https://nbatobrazil.tumblr.com/contato" target="_blank">Contato</a>
+  </nav>
+  <!-- Conteúdo: Carrinho (ILUSTRATIVO) -->
+  <div class="content">
+    <h2>Itens no Carrinho</h2>
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Jogo</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+          <th>Subtotal</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Item 1 (fictício) -->
+        <tr>
+          <td data-label="Jogo" class="item-name">Time A vs Time B</td>
+          <td data-label="Preço">R$ 250,00</td>
+          <td data-label="Quantidade">
+            <div class="item-controls">
+              <button> - </button>
+              <span>2</span>
+              <button> + </button>
+            </div>
+          </td>
+          <td data-label="Subtotal">R$ 500,00</td>
+          <td data-label="Ações">
+            <button class="remove-btn">Remover</button>
+          </td>
+        </tr>
+        <!-- Item 2 (fictício) -->
+        <tr>
+          <td data-label="Jogo" class="item-name">Time C vs Time D</td>
+          <td data-label="Preço">R$ 320,00</td>
+          <td data-label="Quantidade">
+            <div class="item-controls">
+              <button> - </button>
+              <span>1</span>
+              <button> + </button>
+            </div>
+          </td>
+          <td data-label="Subtotal">R$ 320,00</td>
+          <td data-label="Ações">
+            <button class="remove-btn">Remover</button>
+          </td>
+        </tr>
+        <!-- Item 3 (fictício) -->
+        <tr>
+          <td data-label="Jogo" class="item-name">Time E vs Time F</td>
+          <td data-label="Preço">R$ 400,00</td>
+          <td data-label="Quantidade">
+            <div class="item-controls">
+              <button> - </button>
+              <span>3</span>
+              <button> + </button>
+            </div>
+          </td>
+          <td data-label="Subtotal">R$ 1.200,00</td>
+          <td data-label="Ações">
+            <button class="remove-btn">Remover</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- Total -->
+    <div class="cart-total">Total: R$ 2.020,00</div>
+    <!-- Botões de ação -->
+    <div class="actions">
+      <a href="https://nbatobrazil.tumblr.com/checkout" target="_blank">Finalizar Compra</a>
+    </div>
+  </div>
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 NBA Tickets. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

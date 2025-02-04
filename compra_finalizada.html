@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NBA Tickets - Compra Finalizada</title>
+  <style>
+    /* Estilos Gerais */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    header {
+      background: #1D428A; /* Azul NBA */
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+    nav {
+      background: #C9082A; /* Vermelho NBA */
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #FFD700;
+    }
+    /* Conteúdo principal */
+    .content {
+      padding: 40px 20px;
+      min-height: 70vh;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    /* Tabela de resumo */
+    .summary-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #1D428A;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-bottom: 30px;
+    }
+    .summary-table th, .summary-table td {
+      padding: 15px;
+      text-align: center;
+    }
+    .summary-table th {
+      background-color: #000; /* Cabeçalho da tabela preto */
+      color: #FFD700;         /* Texto dourado */
+      text-transform: uppercase;
+    }
+    .summary-table td {
+      vertical-align: middle;
+    }
+    .item-name {
+      font-weight: bold;
+      color: #FFD700;
+    }
+    .purchase-total {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #FFD700; /* Dourado */
+      margin-bottom: 30px;
+    }
+    /* Mensagem de agradecimento */
+    .thank-you {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+    /* Botão ou link para voltar à página inicial */
+    .home-link {
+      text-decoration: none;
+      background: #C9082A;
+      color: #fff;
+      padding: 15px 30px;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .home-link:hover {
+      background: #FFD700;
+      color: #000;
+    }
+    /* Rodapé */
+    footer {
+      background: #1D428A;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 0.9rem;
+    }
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .summary-table, .summary-table th, .summary-table td {
+        display: block;
+        width: 100%;
+      }
+      .summary-table th, .summary-table td {
+        text-align: left;
+      }
+      .summary-table thead {
+        display: none;
+      }
+      .summary-table tr {
+        margin-bottom: 20px;
+        background: #1D428A;
+        border: 1px solid #000;
+        border-radius: 5px;
+      }
+      .summary-table td {
+        padding: 10px;
+        border-bottom: 1px solid #000;
+      }
+      .summary-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: #FFD700;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <h1>NBA To Brazil - Compra Finalizada</h1>
+  </header>
+  <!-- Menu -->
+  <nav>
+    <a href="https://nbatobrazil.tumblr.com/" target="_blank">Página Inicial</a>
+    <a href="https://nbatobrazil.tumblr.com/noticias" target="_blank">Notícias</a>
+    <a href="https://nbatobrazil.tumblr.com/historia" target="_blank">História</a>
+    <a href="https://nbatobrazil.tumblr.com/ingressos" target="_blank">Ingressos</a>
+    <a href="https://nbatobrazil.tumblr.com/resultadospassados" target="_blank">Resultados</a>
+    <a href="https://nbatobrazil.tumblr.com/contato" target="_blank">Contato</a>
+  </nav>
+  <!-- Conteúdo -->
+  <div class="content">
+    <h2>Resumo da Compra</h2>
+    <table class="summary-table">
+      <thead>
+        <tr>
+          <th>Jogo</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Exemplo Fictício 1 -->
+        <tr>
+          <td data-label="Jogo" class="item-name">Time A vs Time B</td>
+          <td data-label="Preço">R$ 250,00</td>
+          <td data-label="Quantidade">2</td>
+          <td data-label="Subtotal">R$ 500,00</td>
+        </tr>
+        <!-- Exemplo Fictício 2 -->
+        <tr>
+          <td data-label="Jogo" class="item-name">Time C vs Time D</td>
+          <td data-label="Preço">R$ 320,00</td>
+          <td data-label="Quantidade">1</td>
+          <td data-label="Subtotal">R$ 320,00</td>
+        </tr>
+        <!-- Exemplo Fictício 3 -->
+        <tr>
+          <td data-label="Jogo" class="item-name">Time E vs Time F</td>
+          <td data-label="Preço">R$ 400,00</td>
+          <td data-label="Quantidade">3</td>
+          <td data-label="Subtotal">R$ 1.200,00</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="purchase-total">Total: R$ 2.020,00</div>
+    <div class="thank-you">
+      <p><strong>Obrigado pela sua compra!</strong></p>
+      <p>Seus ingressos foram adquiridos com sucesso e em breve você receberá um e-mail com todos os detalhes do pedido.</p>
+      <p>Desejamos uma ótima experiência e aguardamos você para futuros jogos da NBA.</p>
+    </div>
+    <!-- Link para voltar à página inicial ou outro destino -->
+    <a href="https://nbatobrazil.tumblr.com" class="home-link">Voltar à Página Inicial</a>
+  </div>
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 NBA Tickets. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
